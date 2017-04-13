@@ -1,0 +1,38 @@
+<div class='container' style='text-align:center;'>
+    <div class='row'>
+        <h1>
+            축하!
+        </h1>
+    </div>
+    <div class='row'>
+            <%= image_tag @tag1 %>
+            <%= image_tag @tag2 %>
+            <%= image_tag @tag3 %>
+            <%= image_tag @tag4 %>
+            <%= image_tag @tag5 %>
+            <%= image_tag @tag6 %>
+    </div>
+</div>
+
+<div class='container' style='text-align:center;'>
+        <% @every_lotto.each do |lotto| %>
+            <br>
+            <% @tag_1= "#{lotto.num1}.jpg" %>
+            <% @tag_2= "#{lotto.num2}.jpg" %>
+            <% @tag_3= "#{lotto.num3}.jpg" %>
+            <% @tag_4= "#{lotto.num4}.jpg" %>
+            <% @tag_5= "#{lotto.num5}.jpg" %>
+            <% @tag_6= "#{lotto.num6}.jpg" %>
+            
+            
+            <%= lotto.id %> 회
+            <br>
+            <%= image_tag @tag_1 %>
+            <%= image_tag @tag_2 %>
+            <%= image_tag @tag_3 %>
+            <%= image_tag @tag_4 %>
+            <%= image_tag @tag_5 %>
+            <%= image_tag @tag_6 %>
+            <br>
+        <% end %>
+</div>
